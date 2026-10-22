@@ -106,54 +106,37 @@
 
 <!-- ░░ HERO ░░ -->
 <section class="hero" id="home" aria-label="Hero">
-  <div class="hero-slides" id="heroSlides">
 
-    <!-- Slide 1 — supermarket/produce wide shot, no people, text shortened to 2 tight lines -->
-    <div class="hero-slide active"
-         style="background-image:url('https://images.unsplash.com/photo-1542838132-92c53300491e?w=1920&q=80');background-position:center 60%;">
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <span class="hero-eyebrow">Welcome to Unibrothers Pakistan</span>
-        <h1>Our Products Have<br/> a Purpose.</h1>
-        <p>Global reach. Local relevance. Connecting product development and responsible sourcing with opportunities in Pakistan.</p>
-        <div class="hero-cta">
-          <a href="#brands" class="btn-primary">Explore Our Portfolio</a>
-          <a href="#about" class="btn-ghost-white">Our Story</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Slide 2 — factory/warehouse interior, zero people, safe top area -->
-    <div class="hero-slide"
-         style="background-image:url('https://images.unsplash.com/photo-1553413077-190dd305871c?w=1920&q=80');background-position:center 50%;">
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <span class="hero-eyebrow">300+ Products Across 4 Categories</span>
-        <h1>Hair, Home, Food<br/> &amp; Toddler Nutrition.</h1>
-        <p>From Finch personal care to Lactomax infant nutrition — quality products trusted by families across Pakistan.</p>
-        <div class="hero-cta">
-          <a href="#categories" class="btn-primary">View Categories</a>
-          <a href="#brands" class="btn-ghost-white">Our Brands</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Slide 3 — aerial/landscape, zero subject near top edge -->
-    <div class="hero-slide"
-         style="background-image:url('https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=1920&q=80');background-position:center 45%;">
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <span class="hero-eyebrow">Responsible Product Stewardship</span>
-        <h1>Quality Standards.<br/> Responsible Governance.</h1>
-        <p>Safety principles, claims governance and quality focus — every product we bring to market meets the highest standards.</p>
-        <div class="hero-cta">
-          <a href="#sustainability" class="btn-primary">Our Stewardship</a>
-          <a href="#trade" class="btn-ghost-white">Trade With Us</a>
-        </div>
-      </div>
-    </div>
-
+  <!-- Full-screen video background -->
+  <div class="hero-video-wrap">
+    <video
+      class="hero-video"
+      src="images/hero.mp4"
+      autoplay
+      muted
+      playsinline
+      loop
+      preload="auto"
+      aria-hidden="true"
+    ></video>
+    <div class="hero-overlay"></div>
   </div>
+
+  <!-- Bottom bar — minimal, doesn't compete with video -->
+  <div class="hero-bottom-bar">
+    <div class="hero-bottom-inner">
+      <div class="hero-bottom-text">
+        <p class="hero-bottom-tagline">Our Products Have a Purpose.</p>
+        <span class="hero-bottom-sub">Unibrothers Pakistan &mdash; 300+ products, global reach, local relevance.</span>
+      </div>
+      <div class="hero-bottom-cta">
+        <a href="#brands" class="btn-primary">Explore Products</a>
+        <a href="#about" class="btn-ghost-white">Our Story</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WTS badge -->
   <div class="hero-managed-badge">
     <img src="images/trade.jpeg" alt="World Trade Solutions"/>
     <div>
@@ -161,16 +144,9 @@
       <strong>World Trade Solutions</strong>
     </div>
   </div>
-  <div class="hero-controls">
-    <button class="hero-arrow" id="heroPrev" aria-label="Previous slide">&#8592;</button>
-    <div class="hero-dots" id="heroDots">
-      <button class="dot active" data-index="0" aria-label="Slide 1"></button>
-      <button class="dot" data-index="1" aria-label="Slide 2"></button>
-      <button class="dot" data-index="2" aria-label="Slide 3"></button>
-    </div>
-    <button class="hero-arrow" id="heroNext" aria-label="Next slide">&#8594;</button>
-  </div>
+
   <a href="#stats" class="scroll-ind" aria-label="Scroll down"><span></span></a>
+
 </section>
 
 <!-- ░░ STATS BAR ░░ -->

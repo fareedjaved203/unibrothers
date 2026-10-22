@@ -110,19 +110,51 @@ function initHero() {
 
   let current  = 0;
   let timer    = null;
-  const INTERVAL = 6500;
+  const INTERVAL       = 6500;   // ms between image slides
+  const VIDEO_INTERVAL = 15000;  // ms to show video slide before auto-advancing
+
+  /* Find the video element inside the video slide (if any) */
+  function getVideo(slideEl) {
+    return slideEl.querySelector('.hero-video') || null;
+  }
+
+  /* Activate a slide — handles both image and video slides */
+  function activateSlide(slideEl) {
+    slideEl.classList.add('active');
+    const vid = getVideo(slideEl);
+    if (vid) {
+      // Reset and play from beginning each time we enter the slide
+      vid.currentTime = 0;
+      vid.play().catch(() => {/* autoplay blocked — silent fail */});
+    }
+  }
+
+  /* Deactivate a slide — pause any video */
+  function deactivateSlide(slideEl) {
+    slideEl.classList.remove('active');
+    const vid = getVideo(slideEl);
+    if (vid) {
+      vid.pause();
+    }
+  }
 
   function goTo(idx) {
-    slides[current].classList.remove('active');
+    deactivateSlide(slides[current]);
     dots[current] && dots[current].classList.remove('active');
     current = ((idx % slides.length) + slides.length) % slides.length;
-    slides[current].classList.add('active');
+    activateSlide(slides[current]);
     dots[current] && dots[current].classList.add('active');
   }
 
   function startAuto() {
     clearInterval(timer);
-    timer = setInterval(() => goTo(current + 1), INTERVAL);
+    // Use longer interval when showing the video slide
+    const isVideoSlide = slides[current].classList.contains('hero-slide--video');
+    const interval = isVideoSlide ? VIDEO_INTERVAL : INTERVAL;
+    timer = setInterval(() => {
+      goTo(current + 1);
+      startAuto(); // recalculate interval for the new slide
+    }, interval);
   }
 
   if (prevBtn) prevBtn.addEventListener('click', () => { goTo(current - 1); startAuto(); });
@@ -154,6 +186,8 @@ function initHero() {
     }, { passive: true });
   }
 
+  // Activate slide 0 properly (it starts with class active in HTML, but we need to trigger video logic)
+  activateSlide(slides[0]);
   startAuto();
 }
 
