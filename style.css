@@ -148,17 +148,17 @@ address{font-style:normal}
 
 /* Main nav */
 .header-main{padding:0}
-.header-inner{height:60px;display:flex;align-items:center;justify-content:space-between;gap:12px}
-@media(min-width:768px){.header-inner{height:68px}}
+.header-inner{height:64px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+@media(min-width:768px){.header-inner{height:76px}}
 
 /* Logo */
-.logo-wrap{display:flex;align-items:center;gap:10px;flex-shrink:0}
-.logo-ub{height:36px;width:auto;object-fit:contain;border-radius:4px}
-@media(min-width:768px){.logo-ub{height:42px}}
-.logo-divider{width:1px;height:28px;background:var(--gray300);flex-shrink:0;transition:background var(--tr)}
+.logo-wrap{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.logo-ub{height:48px;width:auto;object-fit:contain;border-radius:4px}
+@media(min-width:768px){.logo-ub{height:56px}}
+.logo-divider{width:1px;height:36px;background:var(--gray300);flex-shrink:0;transition:background var(--tr)}
 .site-header.scrolled .logo-divider{background:rgba(255,255,255,.22)}
-.logo-wts{height:28px;width:auto;object-fit:contain;border-radius:4px}
-@media(min-width:768px){.logo-wts{height:34px}}
+.logo-wts{height:34px;width:auto;object-fit:contain;border-radius:4px}
+@media(min-width:768px){.logo-wts{height:40px}}
 
 /* Desktop nav */
 .nav-desktop{display:none}
@@ -204,9 +204,9 @@ address{font-style:normal}
    ================================================================ */
 
 /* CSS custom property — set precisely by JS from header.offsetHeight */
-:root { --header-h: 60px; }
-@media(min-width:768px)  { :root { --header-h: 100px; } }
-@media(min-width:1024px) { :root { --header-h: 100px; } }
+:root { --header-h: 64px; }
+@media(min-width:768px)  { :root { --header-h: 108px; } }
+@media(min-width:1024px) { :root { --header-h: 108px; } }
 
 .hero {
   position: relative;
