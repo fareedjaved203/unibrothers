@@ -967,6 +967,13 @@ address{font-style:normal}
 .news-hd{display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
 @media(min-width:640px){.news-hd{flex-direction:row;align-items:flex-end;justify-content:space-between;margin-bottom:36px}}
 .news-hd h2{font-size:clamp(1.4rem,3vw,2.2rem);font-weight:800;color:var(--b900);line-height:1.2}
+.news-section--empty{min-height:45vh;display:flex;align-items:center}
+.news-section--empty .news-hd{width:100%;margin-bottom:0;align-items:center;justify-content:center;text-align:center}
+.news-section--empty .tag,
+.articles-section--empty .tag{font-size:clamp(.85rem,1.5vw,1.1rem)}
+.news-section--empty .news-hd h2,
+.articles-section--empty .news-hd h2{font-size:clamp(2rem,5vw,3.5rem)}
+.connect-cards{display:none}
 
 .news-grid{display:grid;grid-template-columns:1fr;gap:16px}
 @media(min-width:640px){.news-grid{grid-template-columns:1fr 1fr}}
@@ -987,6 +994,8 @@ address{font-style:normal}
    ARTICLES
    ================================================================ */
 .articles-grid{display:grid;grid-template-columns:1fr;gap:20px}
+.articles-section--empty{min-height:45vh;display:flex;align-items:center}
+.articles-section--empty .news-hd{width:100%;margin-bottom:0;align-items:center;justify-content:center;text-align:center}
 @media(min-width:640px){.articles-grid{grid-template-columns:1fr 1fr;gap:24px}}
 @media(min-width:1024px){.articles-grid{gap:28px}}
 .article-card{background:#fff;border-radius:var(--r-section);overflow:hidden;border:1px solid var(--gray200);box-shadow:var(--shadow-sm);transition:transform var(--tr),box-shadow var(--tr);display:flex;flex-direction:column}
@@ -1615,3 +1624,9 @@ section, header, footer,
   .conn-card { padding: 13px 14px; }
   .connect-inner { gap: 28px; }
 }
+
+.connect-section .connect-cards { display: none !important; }
+.connect-inner { justify-content: center; }
+.connect-text { max-width: 720px; margin: 0 auto; text-align: center; }
+.connect-share-label { text-align: center; }
+.connect-share-row { justify-content: center; }
