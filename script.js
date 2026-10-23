@@ -255,19 +255,6 @@ function initProductTabs() {
    — All images mapped to real product photos from images/products/
    ================================================================ */
 const BRANDS = [
-  // ── Hair, Beauty & Personal Care (HC) ──────────────────────────
-  { name: 'Swisse Men\'s Hair Growth',    cat: 'personal', img: 'images/products/p03.jpeg' },
-  { name: 'Hair Amla',                    cat: 'personal', img: 'images/products/p11.jpeg' },
-  { name: 'Finnish Hair Butter Spa',      cat: 'personal', img: 'images/products/p01.jpeg' },
-  { name: 'Black & Brown Shampoo',        cat: 'personal', img: 'images/products/p23.jpeg' },
-  { name: 'Women Hair Removal Cream',     cat: 'personal', img: 'images/products/p33.jpeg' },
-  { name: 'Men Hair Removal Cream',       cat: 'personal', img: 'images/products/p35.jpeg' },
-  { name: 'Hair Removal Spray',           cat: 'personal', img: 'images/products/p36.jpeg' },
-  { name: 'Finch Beauty Bar',             cat: 'personal', img: 'images/products/p19.jpeg' },
-  { name: 'Finch Body Cream',             cat: 'personal', img: 'images/products/p22.jpeg' },
-  { name: 'Finch Body Lotion',            cat: 'personal', img: 'images/products/p20.jpeg' },
-  { name: 'Finch Beauty Cream',           cat: 'personal', img: 'images/products/p21.jpeg' },
-  { name: 'Finch Green Beauty Bar',       cat: 'personal', img: 'images/products/p25.jpeg' },
   // ── Home, Laundry & Hygiene (HH) ───────────────────────────────
   { name: 'Surf Active Laundry',          cat: 'home',     img: 'images/products/p47.jpeg' },
   { name: 'Brite Washing Powder',         cat: 'home',     img: 'images/products/p43.jpeg' },
@@ -307,7 +294,6 @@ const BRANDS = [
 ];
 
 const CAT_LABELS = {
-  personal: 'Hair & Beauty',
   home:     'Home & Hygiene',
   food:     'Food & Nutrition',
   toddler:  'Toddler & Baby',
@@ -340,7 +326,7 @@ function initBrands() {
   });
 
   /* ── 2. Populate filter counts ── */
-  const cats = ['all', 'personal', 'home', 'food', 'toddler'];
+  const cats = ['all', 'home', 'food', 'toddler'];
   cats.forEach(cat => {
     const el = document.getElementById('fc-' + cat);
     if (!el) return;

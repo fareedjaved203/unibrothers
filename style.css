@@ -448,7 +448,7 @@ address{font-style:normal}
    ================================================================ */
 .cat-grid{display:grid;grid-template-columns:1fr;gap:16px}
 @media(min-width:480px){.cat-grid{grid-template-columns:1fr 1fr}}
-@media(min-width:1024px){.cat-grid{grid-template-columns:repeat(4,1fr);gap:24px}}
+@media(min-width:1024px){.cat-grid{grid-template-columns:repeat(3,1fr);gap:24px}}
 .cat-card{background:#fff;border-radius:var(--r-section);overflow:hidden;border:1px solid var(--gray200);box-shadow:var(--shadow-sm);transition:transform var(--tr),box-shadow var(--tr)}
 .cat-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
 .cat-img{
